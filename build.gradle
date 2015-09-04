@@ -1,0 +1,72 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+apply plugin: 'maven'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {
+  mavenCentral()
+}
+
+buildscript {
+  repositories {
+    maven {
+        url "http://dl.bintray.com/palantir/releases"
+    }
+    mavenCentral()
+  }
+  dependencies {
+    classpath "com.palantir:gradle-flexversion:0.8.1"
+  }
+}
+
+dependencies {
+  compile gradleApi()
+  compile localGroovy()
+}
+
+apply plugin: 'gradle-flexversion'
+
+flexversion {
+  useTags = true
+}
+
+group "com.palantir"
+version flexVersion()
+
+task sourceJar(type: Jar) {
+      from sourceSets.main.allSource
+      classifier "sources"
+}
+
+publishing {
+  publications {
+    ivy(MavenPublication) {
+      from components.java
+
+      artifact(sourceJar) {
+        classifier "sources"
+      }
+    }
+  }
+  repositories {
+    maven {
+      url "$buildDir/localpublish/"
+    }
+  }
+}
+
+task zipPublish (type: Zip) {
+  from ("${buildDir}/localpublish") {
+    include '**/*'
+    exclude '**/maven-metadata.xml*'
+  }
+  appendix = "release"
+  destinationDir = file("${project.buildDir}/artifacts")
+}
+
+publish << {
+  file("${project.buildDir}/artifacts").mkdirs()
+  tasks.zipPublish.execute()
+}
