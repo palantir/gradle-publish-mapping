@@ -95,6 +95,14 @@ publishBbbPublicationToZzzRepository
 BUILD SUCCESSFUL
 ```
 
+# Version Compatibility
+
+Sometimes Gradle changes the way tasks and publishing is implemented.  This table
+maps ``publish-mapping`` versions to compatible Gradle versions.
+
+| ``publish-mapping`` version | Gradle version | Notes |
+| --------------------------- | -------------- | ----- |
+| ``1.0.0``                       | ``2.2.1``, ``2.4``     | &nbsp; |
 
 # LICENSE
 
