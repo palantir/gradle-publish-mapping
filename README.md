@@ -1,4 +1,4 @@
-# Publish Mapping plugin for gradle [![Build Status](https://travis-ci.org/palantir/gradle-publish-mapping.svg?branch=master)](https://travis-ci.org/palantir/gradle-publish-mapping) [![Download](https://api.bintray.com/packages/palantir/releases/gradle-publish-mapping/images/download.svg) ](https://bintray.com/palantir/releases/gradle-publish-mapping/_latestVersion)
+# Publish Mapping plugin for gradle
 
 ## Why?
 We created Publish Mapping because Gradle, by default, publishes all publications to
