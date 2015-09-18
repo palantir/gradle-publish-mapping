@@ -19,7 +19,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath 'com.palantir:gradle-publish-mapping:2.0.0'
+		classpath 'com.palantir:publish-mapping:2.0.0'
 	}
 }
 
