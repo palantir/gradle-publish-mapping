@@ -102,7 +102,7 @@ maps ``publish-mapping`` versions to compatible Gradle versions.
 
 | ``publish-mapping`` version | Gradle version | Notes |
 | --------------------------- | -------------- | ----- |
-| ``1.0.0``                       | ``2.2.1``     | &nbsp; |
+| ``1.1.0``                       | ``2.2.1``     | &nbsp; |
 
 # LICENSE
 
