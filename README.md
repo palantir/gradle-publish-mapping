@@ -24,7 +24,7 @@ buildscript {
 }
 
 apply plugin: 'ivy-publish' // or 'maven-publish'
-apply plugin: 'gradle-publish-mapping'
+apply plugin: 'publish-mapping'
 ```
 
 ## Usage
