@@ -19,7 +19,7 @@ buildscript {
 		mavenCentral()
 	}
 	dependencies {
-		classpath 'com.palantir:gradle-publish-mapping:1.0.0'
+		classpath 'com.palantir:gradle-publish-mapping:2.0.0'
 	}
 }
 
@@ -102,7 +102,8 @@ maps ``publish-mapping`` versions to compatible Gradle versions.
 
 | ``publish-mapping`` version | Gradle version | Notes |
 | --------------------------- | -------------- | ----- |
-| ``1.1.0``                       | ``2.2.1``     | &nbsp; |
+| ``[1.1.0, 2.0.0)`` | ``2.2.1``     | &nbsp; |
+| ``[2.0.0, )`` | ``2.4``, ``2.5``, ``2.6`` | &nbsp; |
 
 # LICENSE
 
