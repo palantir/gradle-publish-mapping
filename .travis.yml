@@ -5,4 +5,12 @@ cache:
   directories:
   - ".gradle"
 script:
-- ./gradlew build test publish --stacktrace
+- "./gradlew build test publish --stacktrace"
+deploy:
+  provider: releases
+  api_key:
+    secure: wx7VIFU9NyBIPOMObzFtKVEyEaBNQKedMACOi49lJuBHvcR4tIbPXn8Gch4gR+SokV/bWbiK4DWsC+wUJ7bKq/u6MMBQglSIjzqxANZHw+fmY4EBH9/7G58YD25alwuT/aNIYFLOHxBIXKc2DKGLkCYqJio/J4BA3I/yJFqpUe0Kli3mIYYTYpDaczuBBpcFebTu7FV6tu45NIEg4otYF0ZXHdcIaSblHZ9h5DCUR8hdrZDSc8oZAorHh31mXA6KESzGH/IXYYkWoldPtfupuON5pq9L6Rz6p0qtXYM52IYYI2gVKkIYb+5fKxS4h3GBCY04LZNLvbgeSbqjRL7YlhYywH5NbELLnzONkC4GN9VbPjW+Ja/lCZHEsCXMWjY7X1pPIeyuwrw1iTRlDgqKf0lXT9m6T3+9XGGfLr9gvFEb+nPLMEBAmds4Y4MAQW7+L6a1RcQpr+sXc492ftmZS17uAox1E4nCx/NV+poHtlXuqwznJRxp7Y9SqR1CyZxFKpquWWAN/68xVht2BU2Il/rgieHlXQI+lX8fTZhX5YrcQgNDx9peGMo/FHJx9IaF2T/Vtl7579n8Mi+yP+/XQrI9OBmQ5NitPVSSqps6Z9hM11IPWnfSQ3qD5sh2cC4XxTLDlWDl3wkEwDFr9bu3uuZPhEGURpGi2RAnRcbiLsM=
+  file: build/artifacts/*
+  file_glob: true
+  on:
+    tags: true
