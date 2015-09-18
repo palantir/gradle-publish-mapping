@@ -13,11 +13,10 @@
 // limitations under the License.
 package com.palantir.gradle.publishing.mapping;
 
-import org.gradle.api.DefaultTask
-import org.gradle.api.publish.plugins.PublishingPlugin
-import org.gradle.api.tasks.TaskAction
-
-import com.google.common.base.Strings
+import com.google.common.base.Strings;
+import org.gradle.api.publish.plugins.PublishingPlugin;
+import org.gradle.api.tasks.TaskAction;
+import org.gradle.api.DefaultTask;
 
 public class PrintPublishTasksTask extends DefaultTask {
 
