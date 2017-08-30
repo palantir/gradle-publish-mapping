@@ -107,4 +107,4 @@ maps ``publish-mapping`` versions to compatible Gradle versions.
 
 # LICENSE
 
-Gradle Flex Version is released by Palantir Technologies, Inc. under the Apache 2.0 License. see the included LICENSE file for details.
+Gradle Publish Mapping is released by Palantir Technologies, Inc. under the Apache 2.0 License. see the included LICENSE file for details.
